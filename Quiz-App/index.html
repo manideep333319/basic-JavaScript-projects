@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <!-- meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to the external stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- title of the page -->
+    <title>Quiz App</title>
+  </head>
+  <!-- body -->
+  <body>
+    <!-- quiz section -->
+    <section class="quiz" id="quiz">
+      <!-- quiz center -->
+      <div class="quiz-center">
+        <span id="question-no" class="question-no"></span>
+        <p id="question" class="question"></p>
+        <ul id="options" class="options">
+          <li>
+            <input type="radio" name="option" id="a" class="option" />
+            <label for="a" id="a-text" class="option-text"></label>
+          </li>
+          <li>
+            <input type="radio" name="option" id="b" class="option" />
+            <label for="b" id="b-text" class="option-text"></label>
+          </li>
+          <li>
+            <input type="radio" name="option" id="c" class="option" />
+            <label for="c" id="c-text" class="option-text"></label>
+          </li>
+          <li>
+            <input type="radio" name="option" id="d" class="option" />
+            <label for="d" id="d-text" class="option-text"></label>
+          </li>
+        </ul>
+        <div class="btns">
+          <button type="button" id="prev-btn">previous</button>
+          <button type="button" id="next-btn">next</button>
+          <button type="button" id="submit-btn" class="hide">submit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- result section -->
+    <section class="result hide" id="result">
+      <!-- result center -->
+      <div class="result-center">
+        <div id="result-summary" class="result-summary"></div>
+        <div class="btns">
+          <button type="button" id="reload-btn" onclick="location.reload()">
+            reload
+          </button>
+          <button type="button" id="show-btn">show answers</button>
+          <button type="button" id="hide-btn" class="hide">hide answers</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- show answers section -->
+    <section class="show-answers hide" id="show-answers"></section>
+
+    <!-- link to external javascript file -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

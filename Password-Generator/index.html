@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <!-- meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to font awesome library for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link to the external stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- title of the page -->
+    <title>Password Generator</title>
+  </head>
+  <!-- body -->
+  <body>
+    <!-- generator section -->
+    <section class="generator">
+      <!-- generator title -->
+      <div class="generator-title">
+        <h1>password generator</h1>
+      </div>
+      <!-- generator center -->
+      <div class="generator-center">
+        <div class="result-container">
+          <input type="text" class="result" id="result" disabled>
+          <button type="button" class="clipboard-btn" id="clipboard-btn">
+            <i class="far fa-clipboard"></i>
+            <i class="fa fa-check"></i>
+          </button>
+        </div>
+        <form>
+          <div class="setting">
+            <label>password length</label>
+            <input type="number" id="length" min="4" max="30" value="10" />
+          </div>
+          <div class="setting">
+            <label>include uppercase letters</label>
+            <input type="checkbox" id="uppercase-letters" checked />
+          </div>
+          <div class="setting">
+            <label>include lowecase letters</label>
+            <input type="checkbox" id="lowercase-letters" checked />
+          </div>
+          <div class="setting">
+            <label>include numbers</label>
+            <input type="checkbox" id="numbers" checked />
+          </div>
+          <div class="setting">
+            <label>include symbols</label>
+            <input type="checkbox" id="symbols" checked />
+          </div>
+          <button type="button" class="generate-pwd-btn" id="generate-pwd-btn">
+            generate password
+          </button>
+        </form>
+        
+      </div>
+    </section>
+    <!-- link to external javascript file -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

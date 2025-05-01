@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <!-- meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to font awesome library for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link to the external stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- title of the page -->
+    <title>Custom Countdown</title>
+  </head>
+  <!-- body -->
+  <body>
+    <!--countdown setter section  -->
+    <section class="countdown-setter" id="countdown-setter">
+      <!-- countdown setter title -->
+      <div class="countdown-setter-title">
+        <h1>custom countdown</h1>
+      </div>
+      <!-- countdown setter center -->
+      <div class="countdown-setter-center">
+        <form>
+          <input
+            type="text"
+            placeholder="What are your counting down to?"
+            id="input-text"
+            class="input-text"
+          />
+          <input type="date" id="input-date" class="input-date" />
+          <button type="button" class="submit-btn btn" id="submit-btn">
+            submit
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- countdown time section -->
+    <section class="countdown-time hide" id="countdown-time">
+      <!-- countdown time title -->
+      <div class="countdown-time-title">
+        <h1 id="countdown-time-title"></h1>
+      </div>
+      <!-- countdown time center -->
+      <div class="countdown-time-center">
+        <div>
+          <div><span>30</span>days</div>
+          <div><span>12</span>hours</div>
+          <div><span>65</span>minutes</div>
+          <div><span>43</span>seconds</div>
+        </div>
+        <button type="button" class="reset-btn btn" id="reset-btn">
+          reset
+        </button>
+      </div>
+    </section>
+
+    <!-- countdown complete section -->
+    <section class="countdown-complete hide" id="countdown-complete">
+      <!-- countdown complete center -->
+      <div class="countdown-complete-center">
+        <p>countdown is completed!</p>
+        <button id="new-btn" class="new-btn btn">new countdown</button>
+      </div>
+    </section>
+
+    <div class="loader hide" id="loader"></div>
+
+    <!-- link to external javascript file -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <!-- meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to the external stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- title of the page -->
+    <title>Income And Expense Tracker</title>
+  </head>
+  <!-- body -->
+  <body>
+    <!-- tracker section -->
+    <section class="tracker">
+      <!-- tracker title -->
+      <div class="tracker-title">
+        <h1>income and expense tracker</h1>
+      </div>
+      <!-- tracker center -->
+      <div class="tracker-center">
+        <div class="new-transaction">
+          <h2>add new transaction</h2>
+          <form>
+            <input type="text" id="input-text" placeholder="Text" />
+
+            <input
+              type="number"
+              id="input-amt"
+              placeholder="Amount (e.g. -5 for expense, 5 for income)"
+            />
+
+            <button type="button" class="add-btn" id="add-btn">
+              add transaction
+            </button>
+          </form>
+        </div>
+        <div class="inc-exp">
+          <div class="inc">
+            <h2>income</h2>
+            <span id="inc-amt" class="plus">0.00 Rs</span>
+          </div>
+          <div class="exp">
+            <h2>expense</h2>
+            <span id="exp-amt" class="minus">0.00 Rs</span>
+          </div>
+        </div>
+
+        <div class="history">
+          <h2>history</h2>
+          <p class="hide no-transaction-msg" id="no-transaction-msg">No transactions yet. Start tracking your income and expenses!</p>
+          <ul class="history-list" id="history-list"></ul>
+        </div>
+      </div>
+    </section>
+    <!-- link to external javascript file -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

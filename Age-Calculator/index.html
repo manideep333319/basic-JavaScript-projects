@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>  
+    <!-- meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to the external stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- title of the page -->
+    <title>Age Calculator</title>
+  </head> 
+  <!-- body -->
+  <body>
+    <!-- calculator section -->
+    <section class="calculator"> 
+      <!-- calculator title -->
+      <div class="calculator-title">
+        <h1>age calculator</h1>
+      </div>
+      <!-- calculator center -->
+      <div class="calculator-center">
+        <form>
+          <input type="date" id="dob" />
+          <button type="button" class="calculate-btn btn" id="calculate-btn">
+            calculate
+          </button>
+          <button type="reset" class="reset-btn btn" id="reset-btn">
+            reset
+          </button>
+        </form>
+        <p class="result hide" id="result">
+          Your age is <span id="years"></span> years
+          <span id="months"></span> months <span id="days"></span> days.
+        </p>
+      </div>
+    </section>
+    
+    <!-- link to external javascript file -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+/* importing poppins font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* css variables */
+:root {
+  --ff-primary: "Poppins", sans-serif;
+  --clr-gray: #222;
+  --clr-white: #fff;
+  --bdr-radius: 0.3125rem;
+}
+
+/* body */
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-gray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.125rem;
+  color: var(--clr-gray);
+  letter-spacing: 0.0313rem;
+}
+
+/* global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.btn {
+  width: 9.375rem;
+  height: 100%;
+  background-color: var(--clr-gray);
+  border: 0.125rem solid var(--clr-gray);
+  outline: none;
+  color: var(--clr-white);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: opacity 0.5s;
+  letter-spacing: inherit;
+  font-size: inherit;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* calculator section */
+.calculator {
+  padding: 1.25rem;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 43.75rem;
+  background-color: var(--clr-white);
+  border-radius: var(--bdr-radius);
+}
+
+/* calculator title */
+.calculator-title h1 {
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* calculator center */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.125rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+form input {
+  border-top-left-radius: var(--bdr-radius);
+  border-bottom-left-radius: var(--bdr-radius);
+  border: 0.125rem solid var(--clr-gray);
+  height: 100%;
+  width: calc(100% - 19.0625rem);
+  padding: 0 0.625rem;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+.calculate-btn {
+  border-top-right-radius: var(--bdr-radius);
+  border-bottom-right-radius: var(--bdr-radius);
+}
+.reset-btn {
+  margin-left: 0.3125rem;
+  border-radius: var(--bdr-radius);
+}
+.result {
+  text-align: center;
+  line-height: 1.6;
+}
+.result span {
+  font-weight: 900;
+}
+
+/* media queries */
+@media screen and (max-width: 48rem) {
+  body {
+    font-size: 1rem;
+  }
+  .calculator-title h1 {
+    font-size: 1.5625rem;
+  }
+  form {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.625rem;
+    width: 100%;
+    height: unset;
+  }
+  form input,
+  .calculate-btn,
+  .reset-btn {
+    border-radius: var(--bdr-radius);
+    height: 3.125rem;
+    width: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}

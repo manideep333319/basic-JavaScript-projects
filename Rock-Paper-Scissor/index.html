@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <!-- meta tags for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link to font awesome library for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link to the external stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- title of the page -->
+    <title>Rock Paper Scissor</title>
+  </head>
+  <!-- body -->
+  <body>
+    <!-- game section -->
+    <section class="game" id="game">
+      <!-- game title -->
+      <div class="game-title">
+        <h1>rock paper scissor</h1>
+      </div>
+      <!-- game center -->
+      <div class="game-center">
+        <div class="scores">
+          <div>
+            user score:
+            <span id="user-score">0</span>
+          </div>
+          <div>
+            computer score:
+            <span id="computer-score">0</span>
+          </div>
+        </div>
+        <div class="weapons">
+          <button type="button" class="rock weapon" id="rock">
+            <i class="far fa-hand-rock"></i>
+          </button>
+          <button type="button" class="paper weapon" id="paper">
+            <i class="far fa-hand-paper"></i>
+          </button>
+          <button type="button" class="scissor weapon" id="scissor">
+            <i class="far fa-hand-scissors"></i>
+          </button>
+        </div>
+
+        <div class="choices">
+          <div>
+            user choice:
+            <span id="user-choice" class="choice"></span>
+          </div>
+          <div>
+            computer choice:
+            <span id="computer-choice" class="choice"></span>
+          </div>
+        </div>
+
+        <div class="moves-left">
+          moves left: <span id="moves-left-value">20</span>
+        </div>
+
+        <button type="button" class="btn" id="reset-game-btn">
+          reset game
+        </button>
+      </div>
+    </section>
+
+    <!-- game result section -->
+    <section class="game-result hide" id="game-result">
+      <!-- game result center -->
+      <div class="game-result-center">
+        <div class="final-scores">
+          <div>
+            your score:
+            <span id="final-user-score">0</span>
+          </div>
+          <div>
+            computer score:
+            <span id="final-computer-score">0</span>
+          </div>
+        </div>
+        <div class="winner">
+          <span id="winner"></span>
+        </div>
+        <button type="button" class="btn" id="play-again-btn">
+          play again
+        </button>
+      </div>
+    </section>
+
+    <!-- overlay -->
+    <div class="overlay hide" id="overlay">
+      <span>game over</span>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

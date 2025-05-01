@@ -1,0 +1,171 @@
+/* importing montserrat font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+/* importing muli font from google fonts */
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+/* css variables */
+:root {
+  --clr-yellow: #ffb700;
+  --clr-gray: #222;
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-secondary: "Muli", sans-serif;
+  --bdr-radius: 5px;
+}
+
+/* body */
+body {
+  font-family: var(--ff-primary);
+  background: linear-gradient(90deg, #070807f5 50%, var(--clr-yellow) 50%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.125rem;
+  color: var(--clr-yellow);
+  letter-spacing: 0.0313rem;
+}
+
+/* global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* generator section */
+.generator {
+  background-color: var(--clr-gray);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  padding: 1.25rem;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 500px;
+  border-radius: var(--bdr-radius);
+}
+
+/* generator title */
+.generator-title h1 {
+  font-family: var(--ff-secondary);
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Result Container Section */
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.125rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+.result {
+  border-top-left-radius: var(--bdr-radius);
+  border-bottom-left-radius: var(--bdr-radius);
+  border: 0.125rem solid var(--clr-yellow);
+  height: 100%;
+  width: calc(100% - 60px);
+  padding: 0 0.625rem;
+  color: var(--clr-yellow);
+  font-size: inherit;
+  letter-spacing: 2px;
+  font-family: inherit;
+  background-color: transparent;
+}
+.clipboard-btn {
+  border-top-right-radius: var(--bdr-radius);
+  border-bottom-right-radius: var(--bdr-radius);
+  width: 60px;
+  height: 100%;
+  background-color: var(--clr-yellow);
+  border: 0.125rem solid var(--clr-yellow);
+  outline: none;
+  color: var(--clr-gray);
+  cursor: pointer;
+  transition: opacity 0.5s;
+  font-size: inherit;
+}
+.fa-check {
+  display: none;
+}
+.show-check .fa-check {
+  display: block;
+}
+.show-check .fa-clipboard {
+  display: none;
+}
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid var(--clr-yellow);
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  border-radius: var(--bdr-radius);
+  overflow: hidden;
+}
+input[type="checkbox"]:checked::before {
+  content: "\2713";
+  position: absolute;
+  text-align: center;
+  line-height: 1.8;
+  width: 100%;
+  height: 100%;
+  color: var(--clr-gray);
+  font-weight: bold;
+  background-color: var(--clr-yellow);
+}
+input[type="number"] {
+  background-color: var(--clr-yellow);
+  padding: 3px 5px;
+  border-radius: var(--bdr-radius);
+  outline: none;
+  border: none;
+  color: var(--clr-gray);
+  font-size: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  cursor: pointer;
+}
+.generate-pwd-btn {
+  background-color: var(--clr-yellow);
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: var(--bdr-radius);
+  color: var(--clr-gray);
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: opacity 0.5s;
+  letter-spacing: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .generator-title h1 {
+    font-size: 22px;
+  }
+
+}

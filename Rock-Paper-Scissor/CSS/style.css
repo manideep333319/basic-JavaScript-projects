@@ -1,0 +1,205 @@
+/* importing poppins font from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* css variables */
+:root {
+  --ff-primary: "Poppins", sans-serif;
+  --clr-gold: #825d00;
+  --clr-white: #fff;
+  --bdr-radius: 5px;
+}
+
+/* body */
+body {
+  background-color: var(--clr-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--clr-gold);
+  font-family: var(--ff-primary);
+  font-size: 1.125rem;
+  letter-spacing: 0.0313rem;
+  text-transform: capitalize;
+}
+
+/* global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+span {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.btn {
+  height: 50px;
+  width: 100%;
+  background-color: var(--clr-gold);
+  color: var(--clr-white);
+  border-radius: var(--bdr-radius);
+  border: none;
+  outline: none;
+  letter-spacing: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  text-transform: inherit;
+  transition: opacity 0.5s;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* game section */
+.game {
+  background-color: var(--clr-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 43.75rem;
+  border-radius: var(--bdr-radius);
+}
+
+/* game title */
+.game-title h1 {
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* game center */
+.scores {
+  margin-bottom: 20px;
+  text-align: right;
+  line-height: 1.8;
+}
+.weapons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.weapons .weapon {
+  background-color: var(--clr-gold);
+  color: var(--clr-white);
+  border: none;
+  outline: none;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.weapons .weapon i {
+  font-size: 45px;
+}
+.choices {
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.choice {
+  position: relative;
+}
+.choice::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 4px;
+  background-color: var(--clr-gold);
+  height: 0.5px;
+  width: 40px;
+  border-bottom: 2px solid var(--clr-gold);
+}
+.hide-line::before {
+  display: none;
+}
+.moves-left {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: var(--bdr-radius);
+  background-color: #825d007e;
+  padding: 10px;
+  width: 200px;
+}
+
+/* game result section */
+.game-result {
+  background-color: var(--clr-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 43.75rem;
+  border-radius: var(--bdr-radius);
+}
+
+/* game result center */
+.final-scores {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.winner {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay span {
+  font-size: 45px;
+  color: white;
+  animation: scale 1.5s infinite;
+}
+@keyframes scale {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .game-title h1,
+  .winner {
+    font-size: 25px;
+  }
+  .final-scores {
+    font-size: 20px;
+  }
+  .weapons .weapon {
+    height: 80px;
+    width: 80px;
+  }
+  .weapons .weapon i,
+  .overlay span {
+    font-size: 30px;
+  }
+}
+
+/* hide */
+.hide {
+  display: none;
+}
